@@ -1,0 +1,10 @@
+set(BUILD_MAJOR_VER 0)
+set(BUILD_MINOR_VER 1)
+set(BUILD_PATCH_VER 1)
+
+set(BUILD_CPP_STANDARD 11)
+
+set(CMAKE_CXX_COMPILER "g++")           # native & container
+#set(CMAKE_CXX_COMPILER "g++-10")        # container
+#set(CMAKE_CXX_COMPILER "clang++")       # native
+#set(CMAKE_CXX_COMPILER "clang++-10")    # container

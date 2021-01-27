@@ -1,0 +1,22 @@
+set(BUILD_MAJOR_VER 0)
+set(BUILD_MINOR_VER 1)
+set(BUILD_PATCH_VER 1)
+
+set(BUILD_CPP_STANDARD 11)
+
+set(CMAKE_CXX_COMPILER "g++")           # native & container
+#set(CMAKE_CXX_COMPILER "g++-10")        # container
+#set(CMAKE_CXX_COMPILER "clang++")       # native
+#set(CMAKE_CXX_COMPILER "clang++-10")    # container
+
+add_definitions(-DAPP_VERSION="${BUILD_MAJOR_VER}.${BUILD_MINOR_VER}.${BUILD_PATCH_VER}")
+add_definitions(-DCXX_COMPILER="${CMAKE_CXX_COMPILER}")
+add_definitions(-DCXX_STANDARD="c++${BUILD_CPP_STANDARD}")
+
+function(bitops)
+    if (${BUILD_CPP_STANDARD} GREATER_EQUAL 20)
+        message("++ will use std::countl_zero(x) to find the number of consecutive 0 bits in the value of x, starting from the most significant bit")
+    else()
+        message("++ will use __builtin_clzll(x) to find the number of leading 0-bits in x, starting at the most significant bit position")
+    endif()
+endfunction(bitops)
