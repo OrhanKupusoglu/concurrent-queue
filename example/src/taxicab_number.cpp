@@ -68,16 +68,6 @@ void TaxiCabNumberStr::report_taxicab_number(const int rank) {
             for (int j = 0; j < data.size(); j += 2) {
                 uint32_t a = std::stoul(data[j]);
                 uint32_t b = std::stoul( data[j + 1]);
-
-#ifdef CHECK_TAXICAB_NUMBER
-                if (ra.first != (a * a * a + b * b * b) {
-                    std::cerr << "\n*** ERROR: "
-                              << static_cast<int64_t>(ra.first) << " != "
-                              << a << "^3 + "
-                              << b << "^3\n";
-                }
-#endif
-
                 found.cube.push_back({a, b});
             }
 
@@ -200,16 +190,6 @@ void TaxiCabNumberInt::report_taxicab_number(const int rank) {
             for (int j = 0; j < data.size(); j += 2) {
                 uint16_t a = data[j];
                 uint16_t b = data[j + 1];
-
-#ifdef CHECK_TAXICAB_NUMBER
-                if (ra.first != (a * a * a + b * b * b) {
-                    std::cerr << "\n*** ERROR: "
-                              << static_cast<int64_t>(ra.first) << " != "
-                              << a << "^3 + "
-                              << b << "^3\n";
-                }
-#endif
-
                 found.cube.push_back({a, b});
             }
 
