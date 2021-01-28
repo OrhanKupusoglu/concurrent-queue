@@ -1,7 +1,7 @@
 # Concurrent Queue
 
 A thread-safe queue is an extremely useful tool for multi-threaded applications.
-[Anthony Williams](https://www.amazon.com/C-Concurrency-Action-Anthony-Williams/dp/1617294691/) published in 2008 an article on implementing such a queue using [Boost](https://www.boost.org/) 1.35.
+[Anthony Williams](https://www.amazon.com/C-Concurrency-Action-Anthony-Williams/dp/1617294691/) published in 2008 an [article](https://www.justsoftwaresolutions.co.uk/threading/implementing-a-thread-safe-queue-using-condition-variables.html) on implementing such a queue using [Boost](https://www.boost.org/) 1.35.
 The current code is an updated version of this public-domain code for C++11.
 
 &nbsp;
