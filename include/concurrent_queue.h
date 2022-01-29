@@ -80,7 +80,7 @@ class ConcurrentQueue {
                 return false;
             }
 
-            value = _queue.front();
+            value = std::move(_queue.front());
             _queue.pop();
             return true;
         }
@@ -92,7 +92,7 @@ class ConcurrentQueue {
                 _condition.wait(lock);
             }
 
-            value = _queue.front();
+            value = std::move(_queue.front());
             _queue.pop();
         }
 
@@ -110,7 +110,7 @@ class ConcurrentQueue {
                 }
             }
 
-            value = _queue.front();
+            value = std::move(_queue.front());
             _queue.pop();
             return true;
         }
