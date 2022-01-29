@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y \
     wget \
     curl \
     git \
+    vim \
+    nano \
     cmake
 
 # install g++-10
